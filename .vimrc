@@ -2,6 +2,7 @@
 let mapleader=','
 
 " General settings
+set mouse=a
 set history=700
 set title
 set wildmenu
@@ -85,7 +86,7 @@ let g:ctrlp_map = '<c-p>' " Ctrl-P toggle
 let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py' " Default YCM config path
 let g:cpp_class_scope_highlight = 1 " CPP enhanced highlighting config for scope highlighting
 let g:cpp_experimental_template_highlight = 1 " CPP enhanced for template highlighting
-let g:airline#extensions#tabline#enabled = 1 " Airline tab toggle
+"let g:airline#extensions#tabline#enabled = 1 " Airline tab toggle
 let g:airline_theme = 'dark' " Airline theme
 let g:airline_powerline_fonts = 1 " Airline powerline symbols
 set laststatus=2 " Show Airline powerline all the time
