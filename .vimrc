@@ -55,13 +55,15 @@ Plugin 'edsono/vim-matchit'
 Plugin 'tpope/vim-fugitive'
 Plugin 'octol/vim-cpp-enhanced-highlight'
 Plugin 'chankaward/vim-railscasts-theme'
+Plugin 'chriskempson/base16-vim'
 Plugin 'scrooloose/syntastic'
 Plugin 'bling/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+Plugin 'scrooloose/nerdtree'
 call vundle#end()
 
 " Color and syntax highlighting
-colorscheme railscasts
+colorscheme railscasts 
 syntax on
 filetype on
 filetype indent on
@@ -90,3 +92,7 @@ let g:cpp_experimental_template_highlight = 1 " CPP enhanced for template highli
 let g:airline_theme = 'dark' " Airline theme
 let g:airline_powerline_fonts = 1 " Airline powerline symbols
 set laststatus=2 " Show Airline powerline all the time
+
+" Nerd Tree
+map <C-n> :NERDTreeToggle<CR>
+
