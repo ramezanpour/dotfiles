@@ -14,10 +14,6 @@ set novisualbell
 set nocompatible
 set exrc
 set secure
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
-set noexpandtab
 set encoding=utf8
 set nobackup
 set noswapfile
@@ -36,6 +32,10 @@ set ai
 set si
 set wrap
 set number 
+set cursorline
+
+" Tabs instead of spaces.
+set noet ci pi sts=0 sw=4 ts=4
 
 " Tabs
 map <C-t> :tabnew<CR> 
@@ -55,7 +55,6 @@ Plugin 'edsono/vim-matchit'
 Plugin 'tpope/vim-fugitive'
 Plugin 'octol/vim-cpp-enhanced-highlight'
 Plugin 'chankaward/vim-railscasts-theme'
-Plugin 'chriskempson/base16-vim'
 Plugin 'scrooloose/syntastic'
 Plugin 'bling/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
@@ -67,7 +66,7 @@ colorscheme railscasts
 syntax on
 filetype on
 filetype indent on
-filetype plugin indent on
+"filetype plugin indent on " I have disabled this feature because some plugins had their own tab/space indention policies
 
 " Split windows
 map <C-j> <C-W>j
