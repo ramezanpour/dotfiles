@@ -2,7 +2,7 @@
 set -e
 echo "Starting my Fedora script...\n Before getting started please copy your SSH private keys to ~/.SSH. We need this to be able to download some private repositories."
 
-ESSENTIAL="vim git @c-development gcc-c++ python3 python-devel python3-devel stunnel python3-pip http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm kernel kernel-devel zsh aria2 powerline filezilla goldendict htop hexchat cmake calibre util-linux-user chromium"
+ESSENTIAL="vim git @c-development gcc-c++ python3 python-devel python3-devel stunnel python3-pip http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm kernel kernel-devel zsh aria2 powerline filezilla goldendict htop hexchat cmake calibre util-linux-user"
 
 echo "Installing essential packages..."
 su -c "dnf install -y $ESSENTIAL"
