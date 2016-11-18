@@ -47,23 +47,23 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'kien/ctrlp.vim'
-"Plugin 'Valloric/YouCompleteMe'
+Plugin 'Valloric/YouCompleteMe'
 Plugin 'shawncplus/phpcomplete.vim'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'scrooloose/nerdcommenter'
-Plugin 'edsono/vim-matchit'
+Plugin 'tmhedberg/matchit'
 Plugin 'tpope/vim-fugitive'
 Plugin 'octol/vim-cpp-enhanced-highlight'
 Plugin 'scrooloose/syntastic'
 Plugin 'bling/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'scrooloose/nerdtree'
-Plugin 'chriskempson/base16-vim'
+Plugin 'flazz/vim-colorschemes'
 call vundle#end()
 
 " Color and syntax highlighting
-let base16colorspace=256  "Access colors present in 256 colorspace
-colorscheme base16-default-dark
+"let base16colorspace=256  "Access colors present in 256 colorspace
+colorscheme railscasts 
 syntax on
 filetype on
 filetype indent on
@@ -89,7 +89,7 @@ let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/
 let g:cpp_class_scope_highlight = 1 " CPP enhanced highlighting config for scope highlighting
 let g:cpp_experimental_template_highlight = 1 " CPP enhanced for template highlighting
 "let g:airline#extensions#tabline#enabled = 1 " Airline tab toggle
-let g:airline_theme = 'base16' " Airline theme
+let g:airline_theme = 'dark' " Airline theme
 let g:airline_powerline_fonts = 1 " Airline powerline symbols
 set laststatus=2 " Show Airline powerline all the time
 
