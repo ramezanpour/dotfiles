@@ -59,6 +59,7 @@ Plugin 'bling/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'scrooloose/nerdtree'
 Plugin 'flazz/vim-colorschemes'
+Bundle 'vim-ruby/vim-ruby'
 call vundle#end()
 
 " Color and syntax highlighting
@@ -67,6 +68,7 @@ colorscheme railscasts
 syntax on
 filetype on
 filetype indent on
+filetype plugin on
 "filetype plugin indent on " I have disabled this feature because some plugins had their own tab/space indention policies
 
 " Split windows
