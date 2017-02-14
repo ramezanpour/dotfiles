@@ -2,6 +2,16 @@ URxvt.saveLines: 10000
 URxvt.cursorBlink: 1
 URxvt*scrollBar: false
 
+! do not scroll with output
+URxvt*scrollTtyOutput: false
+
+! scroll in relation to buffer (with mouse scroll or Shift+Page Up)
+URxvt*scrollWithBuffer: true
+
+! scroll back to the bottom on keypress
+URxvt*scrollTtyKeypress: true
+
+
 URxvt.font: xft:DejaVu Sans Mono:pixelsize=16:antialias=true:hinting=true
 URxvt.boldFont: xft:DejaVu Sans Mono:bold:pixelsize=16:antialias=true:hinting=true
 URxvt.italicFont: xft:DejaVu Sans Mono:italic:pixelsize=16:antialias=true:hinting=true
@@ -35,3 +45,11 @@ URxvt.boldItalicFont: xft:DejaVu Sans Mono:bold:italic:pixelsize=16:antialias=tr
 !white
 *color7:        #f3ebe2
 *color15:       #eeeeee
+
+
+! Extensions
+URxvt.perl-ext-common: default, matcher, fullscreen
+URxvt.url-launcher: /usr/bin/xdg-open
+Urxvt.matcher.button: 1
+Urxvt.keysym.F11: perl:fullscreen:switch
+
