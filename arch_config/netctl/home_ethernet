@@ -1,0 +1,3 @@
+Interface=eno1
+Connection=ethernet
+IP=dhcp
