@@ -48,12 +48,10 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'kien/ctrlp.vim'
 Plugin 'Valloric/YouCompleteMe'
-Plugin 'shawncplus/phpcomplete.vim'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'tmhedberg/matchit'
 Plugin 'tpope/vim-fugitive'
-Plugin 'octol/vim-cpp-enhanced-highlight'
 Plugin 'scrooloose/syntastic'
 Plugin 'bling/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
@@ -63,7 +61,6 @@ Bundle 'vim-ruby/vim-ruby'
 call vundle#end()
 
 " Color and syntax highlighting
-"let base16colorspace=256  "Access colors present in 256 colorspace
 colorscheme railscasts 
 syntax on
 filetype on

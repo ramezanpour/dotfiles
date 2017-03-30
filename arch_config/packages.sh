@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Essential packages
-sudo pacman -S vlc qt4 htop tmux vim dialog wpa_supplicant iw i3 dmenu feh firefox git cmake pulseaudio pulseaudio-alsa alsa-utils openconnect openssh screenfetch zsh redshift ranger ntfs-3g unrar linux-headers linux --needed
+sudo pacman -S vlc qt4 htop tmux vim dialog wpa_supplicant iw i3 dmenu feh firefox git cmake pulseaudio pulseaudio-alsa alsa-utils openconnect openssh screenfetch zsh redshift ranger ntfs-3g unrar linux-headers linux powerline --needed
 
 # Yaourt
 
@@ -17,6 +17,9 @@ makepkg -si
 
 # Install dropbox
 yaourt -S dropbox turses
+
+# Vundle for vim
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 
 
