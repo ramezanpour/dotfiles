@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Essential packages
-sudo pacman -S vlc qt4 htop tmux vim dialog wpa_supplicant iw i3 dmenu feh firefox git cmake pulseaudio pulseaudio-alsa alsa-utils openconnect openssh screenfetch zsh redshift ranger ntfs-3g unrar linux-headers linux powerline lm_sensors libreoffice-still goldendict thunderbird --needed
+sudo pacman -S vlc qt4 htop tmux vim dialog wpa_supplicant iw i3 dmenu feh firefox git cmake pulseaudio pulseaudio-alsa alsa-utils openconnect openssh screenfetch zsh redshift ranger ntfs-3g unrar linux-headers linux powerline lm_sensors libreoffice-still goldendict thunderbird transmission-gtk --needed
 
 # Yaourt
 
