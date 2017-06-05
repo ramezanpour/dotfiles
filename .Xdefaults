@@ -14,7 +14,7 @@ URxvt*scrollTtyKeypress: true
 ! mute visual bell
 URxvt*visualBell: true
 
-URxvt.font: xft:DejaVu Sans Mono for Powerline:pixelsize=16:antialias=true:hinting=true
+URxvt.font: xft:DejaVu Sans Mono:pixelsize=16:antialias=true:hinting=true
 URxvt.boldFont: xft:DejaVu Sans Mono:bold:pixelsize=16:antialias=true:hinting=true
 URxvt.italicFont: xft:DejaVu Sans Mono:italic:pixelsize=16:antialias=true:hinting=true
 URxvt.boldItalicFont: xft:DejaVu Sans Mono:bold:italic:pixelsize=16:antialias=true:hinting=true
