@@ -47,21 +47,20 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'kien/ctrlp.vim'
-Plugin 'Valloric/YouCompleteMe'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'tmhedberg/matchit'
-Plugin 'tpope/vim-fugitive'
 Plugin 'scrooloose/syntastic'
+Plugin 'scrooloose/nerdtree'
+Plugin 'Valloric/YouCompleteMe'
+Bundle 'vim-ruby/vim-ruby'
+Plugin 'flazz/vim-colorschemes'
 Plugin 'bling/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-Plugin 'scrooloose/nerdtree'
-Plugin 'flazz/vim-colorschemes'
-Bundle 'vim-ruby/vim-ruby'
 call vundle#end()
 
 " Color and syntax highlighting
-colorscheme railscasts 
+colorscheme CandyPaper
 syntax on
 filetype on
 filetype indent on
@@ -86,12 +85,15 @@ nnoremap <F12> :YcmCompleter GoTo<CR>
 let g:ctrlp_map = '<c-p>' " Ctrl-P toggle
 let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py' " Default YCM config path
 let g:cpp_class_scope_highlight = 1 " CPP enhanced highlighting config for scope highlighting
-let g:cpp_experimental_template_highlight = 1 " CPP enhanced for template highlighting
-"let g:airline#extensions#tabline#enabled = 1 " Airline tab toggle
+let g:ycm_collect_identifiers_from_tags_files = 1 " Let YCM read tags from Ctags file
+let g:ycm_use_ultisnips_completer = 1 " Default 1, just ensure
+let g:ycm_seed_identifiers_with_syntax = 1 " Completion for programming language's keyword
+let g:ycm_complete_in_comments = 1 " Completion in comments
+let g:ycm_complete_in_strings = 1 " Completion in string
+" Airline
 let g:airline_theme = 'dark' " Airline theme
 let g:airline_powerline_fonts = 1 " Airline powerline symbols
 set laststatus=2 " Show Airline powerline all the time
-
 " Nerd Tree
 map <C-n> :NERDTreeToggle<CR>
 
