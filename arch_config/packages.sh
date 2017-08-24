@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Essential packages
-sudo pacman -S vlc qt4 htop tmux vim dialog wpa_supplicant iw i3 dmenu feh firefox git cmake pulseaudio pulseaudio-alsa alsa-utils openconnect openssh screenfetch zsh redshift ranger ntfs-3g unrar linux-headers linux powerline lm_sensors libreoffice-still goldendict thunderbird transmission-gtk links sdcv youtube-dl aria2  --needed
+sudo pacman -S vlc qt4 htop tmux vim dialog wpa_supplicant iw i3 dmenu feh firefox git cmake pulseaudio pulseaudio-alsa alsa-utils openconnect openssh screenfetch zsh redshift ranger ntfs-3g unrar linux-headers linux powerline lm_sensors libreoffice-still goldendict thunderbird transmission-gtk links sdcv youtube-dl aria2 units rxvt-unicode  --needed
 
 # Yaourt
 
@@ -21,6 +21,14 @@ yaourt -S dropbox turses
 # Vundle for vim
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
+# Powerline fonts
+mkdir ~/Temp
+cd ~/Temp
+git clone https://github.com/powerline/fonts.git --depth=1
+cd ~/Temp/fonts
+./install.sh
+cd ~/
+rm -rf ~/Temp
 
 
 # Oh my zsh
