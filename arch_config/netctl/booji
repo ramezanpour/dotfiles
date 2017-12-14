@@ -1,7 +1,0 @@
-Description='Automatically generated profile by wifi-menu'
-Interface=wlo1
-Connection=wireless
-Security=wpa
-ESSID=Booji
-IP=dhcp
-Key=12334566
