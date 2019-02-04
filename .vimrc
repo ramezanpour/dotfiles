@@ -2,29 +2,32 @@
 let mapleader=','
 
 " General settings
-set mouse=a
 set history=700
 set title
 set wildmenu
 set ruler
 set hlsearch
 set showmatch
+" No sound on errors
 set noerrorbells
 set novisualbell
+set t_vb=
+set tm=500
 set nocompatible
 set exrc
 set secure
 set encoding=utf8
+set ffs=unix,dos,mac
 set nobackup
 set noswapfile
 set nowb
 set autoread
 set ignorecase
 set smartcase
+set incsearch
 set timeoutlen=2000
 set background=dark
 set backspace=2
-set smarttab
 set showcmd
 set scrolloff=3
 set ttyfast
@@ -33,13 +36,32 @@ set si
 set wrap
 set number 
 set cursorline
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+set expandtab
+set smarttab
 
-" Tabs instead of spaces.
-set noet ci pi sts=0 sw=4 ts=4
+" Show invisible chars
+set listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<
+set list
 
-" Tabs
-map <C-t> :tabnew<CR> 
-map <S-Tab> :tabn<CR>
+" Ignore compiled files
+set wildignore=*.o,*~,*.pyc
+if has("win16") || has("win32")
+    set wildignore+=.git\*,.hg\*,.svn\*
+else
+    set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.DS_Store
+endif
+
+" Set height of command bar
+set cmdheight=2
+" Useful mappings for managing tabs
+map <leader>tn :tabnew<cr>
+map <leader>to :tabonly<cr>
+map <leader>tc :tabclose<cr>
+map <leader>tm :tabmove 
+map <leader>t<leader> :tabnext 
 
 " Vungle
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -52,20 +74,17 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'tmhedberg/matchit'
 Plugin 'scrooloose/syntastic'
 Plugin 'scrooloose/nerdtree'
-Plugin 'Valloric/YouCompleteMe'
-Bundle 'vim-ruby/vim-ruby'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'bling/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+Plugin 'Valloric/YouCompleteMe'
 call vundle#end()
 
 " Color and syntax highlighting
 colorscheme CandyPaper
-syntax on
-filetype on
 filetype indent on
 filetype plugin on
-"filetype plugin indent on " I have disabled this feature because some plugins had their own tab/space indention policies
+syntax on
 
 " Split windows
 map <C-j> <C-W>j
@@ -94,6 +113,7 @@ let g:ycm_complete_in_strings = 1 " Completion in string
 let g:airline_theme = 'dark' " Airline theme
 let g:airline_powerline_fonts = 1 " Airline powerline symbols
 set laststatus=2 " Show Airline powerline all the time
+set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l\ \ Column:\ %c
 " Nerd Tree
 map <C-n> :NERDTreeToggle<CR>
 
