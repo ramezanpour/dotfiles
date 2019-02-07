@@ -23,7 +23,6 @@ set noswapfile
 set nowb
 set autoread
 set ignorecase
-set smartcase
 set incsearch
 set timeoutlen=2000
 set background=dark
@@ -75,16 +74,14 @@ Plugin 'tmhedberg/matchit'
 Plugin 'scrooloose/syntastic'
 Plugin 'scrooloose/nerdtree'
 Plugin 'flazz/vim-colorschemes'
-Plugin 'bling/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
 Plugin 'Valloric/YouCompleteMe'
 call vundle#end()
 
 " Color and syntax highlighting
-colorscheme CandyPaper
 filetype indent on
 filetype plugin on
 syntax on
+colorscheme Gruvbox
 
 " Split windows
 map <C-j> <C-W>j
@@ -109,11 +106,11 @@ let g:ycm_use_ultisnips_completer = 1 " Default 1, just ensure
 let g:ycm_seed_identifiers_with_syntax = 1 " Completion for programming language's keyword
 let g:ycm_complete_in_comments = 1 " Completion in comments
 let g:ycm_complete_in_strings = 1 " Completion in string
+let g:ycm_autoclose_preview_window_after_insertion = 1
+let g:ycm_python_binary_path = 'python3'
+let g:ycm_min_num_of_chars_for_completion = 1
 " Airline
-let g:airline_theme = 'dark' " Airline theme
-let g:airline_powerline_fonts = 1 " Airline powerline symbols
 set laststatus=2 " Show Airline powerline all the time
-set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l\ \ Column:\ %c
 " Nerd Tree
 map <C-n> :NERDTreeToggle<CR>
 
