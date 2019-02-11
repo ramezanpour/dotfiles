@@ -75,6 +75,8 @@ Plugin 'scrooloose/syntastic'
 Plugin 'scrooloose/nerdtree'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 call vundle#end()
 
 " Color and syntax highlighting
@@ -82,7 +84,6 @@ filetype indent on
 filetype plugin on
 syntax on
 colorscheme Gruvbox
-
 " Split windows
 map <C-j> <C-W>j
 map <C-k> <C-W>k
@@ -99,6 +100,8 @@ nnoremap <F12> :YcmCompleter GoTo<CR>
 
 " Plugin settings
 let g:ctrlp_map = '<c-p>' " Ctrl-P toggle
+
+" YCM settings"
 let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py' " Default YCM config path
 let g:cpp_class_scope_highlight = 1 " CPP enhanced highlighting config for scope highlighting
 let g:ycm_collect_identifiers_from_tags_files = 1 " Let YCM read tags from Ctags file
@@ -109,6 +112,10 @@ let g:ycm_complete_in_strings = 1 " Completion in string
 let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_python_binary_path = 'python3'
 let g:ycm_min_num_of_chars_for_completion = 1
+
+" Airline settings
+let g:airline_theme='angr'
+let g:airline_powerline_fonts = 1
 " Airline
 set laststatus=2 " Show Airline powerline all the time
 " Nerd Tree
