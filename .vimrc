@@ -3,6 +3,7 @@ let mapleader=','
 
 " General settings
 set history=700
+set colorcolumn=80
 set title
 set wildmenu
 set ruler
