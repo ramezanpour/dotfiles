@@ -83,19 +83,12 @@ filetype indent on
 filetype plugin on
 syntax on
 colorscheme Gruvbox
+
 " Split windows
 map <C-j> <C-W>j
 map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
-
-" Fix unexpected typos
-cmap Wq wq
-cmap WQ wq
-cmap wQ wq
-
-" Jump to definition wit F12
-nnoremap <F12> :YcmCompleter GoTo<CR>
 
 " Plugin settings
 let g:ctrlp_map = '<c-p>' " Ctrl-P toggle
@@ -120,3 +113,6 @@ set laststatus=2 " Show Airline powerline all the time
 " Nerd Tree
 map <C-n> :NERDTreeToggle<CR>
 
+
+" YCM GoTo defination shortcut
+noremap <leader>d :YcmCompleter GoToDefinition<CR>
