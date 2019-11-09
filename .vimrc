@@ -73,17 +73,16 @@ Plugin 'tmhedberg/matchit'
 Plugin 'scrooloose/syntastic'
 Plugin 'scrooloose/nerdtree'
 Plugin 'flazz/vim-colorschemes'
-Plugin 'Valloric/YouCompleteMe'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'tpope/vim-fugitive'
+Plugin 'davidhalter/jedi-vim'
 call vundle#end()
 
 " Color and syntax highlighting
-filetype indent on
-filetype plugin on
+filetype plugin indent on
 syntax on
-colorscheme Gruvbox
+colorscheme evening
 
 " Split windows
 map <C-j> <C-W>j
@@ -106,14 +105,20 @@ let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_python_binary_path = 'python3'
 let g:ycm_min_num_of_chars_for_completion = 1
 
+" Jedi VIM
+let g:jedi#goto_command = "<leader>d"
+let g:jedi#goto_assignments_command = "<leader>g"
+let g:jedi#goto_definitions_command = ""
+let g:jedi#documentation_command = "K"
+let g:jedi#usages_command = "<leader>n"
+let g:jedi#completions_command = "<C-Space>"
+let g:jedi#rename_command = "<leader>r"
+
 " Airline settings
-let g:airline_theme='angr'
+let g:airline_theme='powerlineish'
 let g:airline_powerline_fonts = 1
 " Airline
 set laststatus=2 " Show Airline powerline all the time
 " Nerd Tree
 map <C-n> :NERDTreeToggle<CR>
 
-
-" YCM GoTo defination shortcut
-noremap <leader>d :YcmCompleter GoToDefinition<CR>
