@@ -14,21 +14,18 @@ set noerrorbells
 set novisualbell
 set t_vb=
 set tm=500
-set nocompatible
 set exrc
-set secure
 set encoding=utf8
 set ffs=unix,dos,mac
 set nobackup
 set noswapfile
 set nowb
 set autoread
-set ignorecase
+set smartcase
 set incsearch
 set timeoutlen=2000
 set background=dark
 set backspace=2
-set showcmd
 set scrolloff=3
 set ttyfast
 set ai
@@ -121,4 +118,4 @@ let g:airline_powerline_fonts = 1
 set laststatus=2 " Show Airline powerline all the time
 " Nerd Tree
 map <C-n> :NERDTreeToggle<CR>
-
+set secure
