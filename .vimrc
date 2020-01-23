@@ -5,7 +5,6 @@ set nocompatible
 
 " General settings
 set history=700
-set colorcolumn=120
 set title
 set wildmenu
 set ruler
@@ -37,6 +36,7 @@ set shiftwidth=4
 set softtabstop=4
 set expandtab
 set smarttab
+set background=dark
 
 " Show invisible chars
 set listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<
@@ -59,21 +59,22 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'kien/ctrlp.vim'
-Plugin 'jiangmiao/auto-pairs'
+"Plugin 'jiangmiao/auto-pairs' " Should check to see what this plugin exactly
+"does.
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'tmhedberg/matchit'
-Plugin 'scrooloose/syntastic'
 Plugin 'scrooloose/nerdtree'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'tpope/vim-fugitive'
-Plugin 'davidhalter/jedi-vim'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'flazz/vim-colorschemes'
 call vundle#end()
 
 " Color and syntax highlighting
 filetype plugin indent on
 syntax on
-colorscheme wombat256i
+colorscheme evening
 
 " Split windows
 map <C-j> <C-W>j
@@ -96,3 +97,7 @@ let g:jedi#rename_command = "<leader>r"
 " Nerd Tree
 map <C-n> :NERDTreeToggle<CR>
 set secure
+
+" YCM
+let g:ycm_extra_conf_globlist = ['~/projects/*']
+
