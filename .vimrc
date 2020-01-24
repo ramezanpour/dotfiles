@@ -69,6 +69,7 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'tpope/vim-fugitive'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'flazz/vim-colorschemes'
+Plugin 'tell-k/vim-autopep8'
 call vundle#end()
 
 " Color and syntax highlighting
@@ -101,3 +102,6 @@ set secure
 " YCM
 let g:ycm_extra_conf_globlist = ['~/projects/*']
 
+" Autopep8
+let g:autopep8_disable_show_diff=1
+let g:autopep8_on_save = 1
