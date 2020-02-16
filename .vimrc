@@ -31,12 +31,14 @@ set si
 set wrap
 set number 
 set cursorline
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
+"set tabstop=4
+"set shiftwidth=4
+"set softtabstop=4
 set expandtab
 set smarttab
 set background=dark
+
+set mouse=a
 
 " Show invisible chars
 set listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<
@@ -59,8 +61,6 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'kien/ctrlp.vim'
-"Plugin 'jiangmiao/auto-pairs' " Should check to see what this plugin exactly
-"does.
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'tmhedberg/matchit'
 Plugin 'scrooloose/nerdtree'
@@ -101,7 +101,8 @@ set secure
 
 " YCM
 let g:ycm_extra_conf_globlist = ['~/projects/*']
+let g:ycm_autoclose_preview_window_after_completion = 1
 
 " Autopep8
-let g:autopep8_disable_show_diff=1
+let g:autopep8_disable_show_diff = 1
 let g:autopep8_on_save = 1
