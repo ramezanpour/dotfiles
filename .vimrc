@@ -13,6 +13,7 @@ set showmatch
 " No sound on errors
 set noerrorbells
 set novisualbell
+
 set t_vb=
 set tm=500
 set encoding=utf8
@@ -31,9 +32,9 @@ set si
 set wrap
 set number 
 set cursorline
-"set tabstop=4
-"set shiftwidth=4
-"set softtabstop=4
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
 set expandtab
 set smarttab
 set background=dark
@@ -51,9 +52,8 @@ set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.DS_Store
 " Useful mappings for managing tabs
 "map <leader>tn :tabnew<cr>
 map <leader>to :tabonly<cr>
-map <leader>tc :tabclose<cr>
-map <leader>tm :tabmove 
-map <leader>tn :tabnext<cr>
+map <leader>tn :tabn<cr>
+map <leader>tp :tabp<cr>
 
 " Vungle
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -106,3 +106,6 @@ let g:ycm_autoclose_preview_window_after_completion = 1
 " Autopep8
 let g:autopep8_disable_show_diff = 1
 let g:autopep8_on_save = 1
+
+" Airline
+let g:airline#extensions#tabline#enabled = 1
