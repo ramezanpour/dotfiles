@@ -75,7 +75,7 @@ call vundle#end()
 " Color and syntax highlighting
 filetype plugin indent on
 syntax on
-colorscheme evening
+colorscheme dracula
 
 " Split windows
 map <C-j> <C-W>j
@@ -106,6 +106,5 @@ let g:ycm_autoclose_preview_window_after_completion = 1
 " Autopep8
 let g:autopep8_disable_show_diff = 1
 let g:autopep8_on_save = 1
+let g:airline_theme='deus'
 
-" Airline
-let g:airline#extensions#tabline#enabled = 1
