@@ -4,7 +4,6 @@ let mapleader=','
 set nocompatible
 
 " General settings
-set history=700
 set title
 set wildmenu
 set ruler
@@ -39,7 +38,6 @@ set expandtab
 set smarttab
 set background=dark
 
-set mouse=a
 
 " Show invisible chars
 set listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<
@@ -66,16 +64,19 @@ Plugin 'tmhedberg/matchit'
 Plugin 'scrooloose/nerdtree'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-Plugin 'tpope/vim-fugitive'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'tell-k/vim-autopep8'
+Plugin 'fatih/vim-go'
+Plugin 'prettier/vim-prettier'
+Plugin 'joshdick/onedark.vim'
+Plugin 'sheerun/vim-polyglot'
 call vundle#end()
 
 " Color and syntax highlighting
 filetype plugin indent on
 syntax on
-colorscheme dracula
+colorscheme Tomorrow-Night
 
 " Split windows
 map <C-j> <C-W>j
@@ -86,25 +87,16 @@ map <C-l> <C-W>l
 " Ctrl-P
 let g:ctrlp_map = '<c-p>' 
 
-" Jedi VIM
-let g:jedi#goto_command = "<leader>d"
-let g:jedi#goto_assignments_command = "<leader>g"
-let g:jedi#goto_definitions_command = ""
-let g:jedi#documentation_command = "K"
-let g:jedi#usages_command = "<leader>n"
-let g:jedi#completions_command = "<leader><Space>"
-let g:jedi#rename_command = "<leader>r"
-
 " Nerd Tree
 map <C-n> :NERDTreeToggle<CR>
 set secure
 
 " YCM
-let g:ycm_extra_conf_globlist = ['~/projects/*']
-let g:ycm_autoclose_preview_window_after_completion = 1
+"let g:ycm_extra_conf_globlist = ['~/projects/*']
+"let g:ycm_autoclose_preview_window_after_completion = 1
 
 " Autopep8
 let g:autopep8_disable_show_diff = 1
 let g:autopep8_on_save = 1
-let g:airline_theme='deus'
+let g:airline_theme='tomorrow'
 
