@@ -18,13 +18,13 @@ set tm=500
 set encoding=utf8
 set ffs=unix,dos,mac
 set nobackup
-set noswapfile
-set autoread
-set smartcase
-set incsearch
-set timeoutlen=2000
+set noswapfile " Do not create the swap file.
+set autoread " Reread the file if it's modified outside the vim.
+set ignorecase
+set smartcase " Works only if ignorecase is set. ignores the case if all written in lowercase otherwise searches for case-sensitive options.
+set incsearch " Shows search results as typing in search mode.
 set backspace=2
-set scrolloff=3
+set scrolloff=3 " Minimum number of screen lines to keep above and below the cursor.
 set ttyfast
 set ai
 set si
@@ -36,8 +36,6 @@ set shiftwidth=4
 set softtabstop=4
 set expandtab
 set smarttab
-set background=dark
-
 
 " Show invisible chars
 set listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<
@@ -48,7 +46,7 @@ set wildignore=*.o,*~,*.pyc
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.DS_Store
 
 " Useful mappings for managing tabs
-"map <leader>tn :tabnew<cr>
+map <leader>tn :tabnew<cr>
 map <leader>to :tabonly<cr>
 map <leader>tn :tabn<cr>
 map <leader>tp :tabp<cr>
@@ -68,8 +66,6 @@ Plugin 'Valloric/YouCompleteMe'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'tell-k/vim-autopep8'
 Plugin 'fatih/vim-go'
-Plugin 'prettier/vim-prettier'
-Plugin 'joshdick/onedark.vim'
 Plugin 'sheerun/vim-polyglot'
 call vundle#end()
 
