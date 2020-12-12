@@ -13,7 +13,6 @@ set showmatch
 set noerrorbells
 set novisualbell
 
-set t_vb=
 set tm=500
 set encoding=utf8
 set ffs=unix,dos,mac
@@ -89,7 +88,7 @@ set secure
 
 " YCM
 "let g:ycm_extra_conf_globlist = ['~/projects/*']
-"let g:ycm_autoclose_preview_window_after_completion = 1
+let g:ycm_autoclose_preview_window_after_completion = 1
 
 " Autopep8
 let g:autopep8_disable_show_diff = 1
