@@ -23,9 +23,11 @@ alias edviconf="nvim ~/.config/nvim/init.vim"
 alias vim="nvim"
 alias weather="curl -s 'http://wttr.in/tehran'"
 alias hn="links https://news.ycombinator.com"
+alias u-dot="updateDotFiles.sh"
 
 
 export PATH="/usr/local/opt/ruby/bin:$PATH"
 export PATH="/usr/local/opt/python@3.9/bin/:$PATH"
+export PATH="$HOME/dev/scripts/:$PATH"
 
 # bindkey -v
