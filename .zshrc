@@ -21,7 +21,8 @@ alias vpn="sudo openconnect 162.223.88.26:8443 --servercert pin-sha256:9OzJcVfnM
 alias godev="cd ~/go/src"
 alias edviconf="nvim ~/.config/nvim/init.vim"
 alias vim="nvim"
-alias weather="curl -s 'http://wttr.in/tehran?format=3'"
+alias weather="curl -s 'http://wttr.in/tehran'"
+alias hn="links https://news.ycombinator.com"
 
 
 export PATH="/usr/local/opt/ruby/bin:$PATH"

@@ -45,7 +45,7 @@ set wildignore=*.o,*~,*.pyc
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.DS_Store
 
 " Useful mappings for managing tabs
-map <leader>tn :tabnew<cr>
+map <leader>te :tabedit<cr>
 map <leader>to :tabonly<cr>
 map <leader>tn :tabn<cr>
 map <leader>tp :tabp<cr>
@@ -75,12 +75,14 @@ Plug 'sheerun/vim-polyglot'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Git integration
 Plug 'tpope/vim-fugitive'
+" Auto-close braces and scopes
+Plug 'jiangmiao/auto-pairs'
 call plug#end()
 
 " Color and syntax highlighting
 filetype plugin indent on
 syntax on
-colorscheme gruvbox
+colorscheme nord
 
 " Split windows
 map <C-j> <C-W>j
@@ -124,3 +126,5 @@ nmap <leader>a <Plug>(coc-codeaction-selected)
 " Format action on <leader>f
 vmap <leader>f  <Plug>(coc-format-selected)
 nmap <leader>f  <Plug>(coc-format-selected)
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gv :vsp<CR><Plug>(coc-definition)<C-W>L

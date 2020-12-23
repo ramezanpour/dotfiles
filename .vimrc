@@ -54,17 +54,29 @@ map <leader>tp :tabp<cr>
 set rtp+=~/.vim/bundle/Vundle.vim
 
 call vundle#begin()
+" The Vindle itself
 Plugin 'VundleVim/Vundle.vim'
+" Fuzzy search by pressing Ctrl-P
 Plugin 'kien/ctrlp.vim'
+" Comment/Uncomment tool
 Plugin 'scrooloose/nerdcommenter'
+" Switch to the begining and the end of a block by pressing %
 Plugin 'tmhedberg/matchit'
+" A Tree-like side bar for better navigation
 Plugin 'scrooloose/nerdtree'
+" A cool status bar
 Plugin 'vim-airline/vim-airline'
+" Airline themes
 Plugin 'vim-airline/vim-airline-themes'
+" Code auto-completion plugin
 Plugin 'Valloric/YouCompleteMe'
+" A collection of themes for vim
 Plugin 'flazz/vim-colorschemes'
+" Standardize Python code library for vim
 Plugin 'tell-k/vim-autopep8'
+" The Golang plugin
 Plugin 'fatih/vim-go'
+" Better syntax-highlighting for filetypes in vim
 Plugin 'sheerun/vim-polyglot'
 call vundle#end()
 
@@ -86,6 +98,9 @@ let g:ctrlp_map = '<c-p>'
 map <C-n> :NERDTreeToggle<CR>
 set secure
 
+" Clipboard
+set clipboard=unnamed
+
 " YCM
 "let g:ycm_extra_conf_globlist = ['~/projects/*']
 let g:ycm_autoclose_preview_window_after_completion = 1
@@ -93,5 +108,7 @@ let g:ycm_autoclose_preview_window_after_completion = 1
 " Autopep8
 let g:autopep8_disable_show_diff = 1
 let g:autopep8_on_save = 1
+
+" Airline
 let g:airline_theme='tomorrow'
 
