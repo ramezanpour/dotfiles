@@ -22,8 +22,8 @@ alias godev="cd ~/go/src"
 alias edviconf="nvim ~/.config/nvim/init.vim"
 alias vim="nvim"
 alias weather="curl -s 'http://wttr.in/tehran'"
-alias hn="links https://news.ycombinator.com"
 alias u-dot="updateDotFiles.sh"
+alias scripts="cd ~/dev/scripts"
 
 
 export PATH="/usr/local/opt/ruby/bin:$PATH"

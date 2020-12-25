@@ -35,6 +35,7 @@ set softtabstop=4
 set expandtab
 set smarttab
 set colorcolumn=120
+set mouse=a " Enable mouse for all modes.
 
 " Show invisible chars
 set listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<
