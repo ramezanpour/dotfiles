@@ -5,7 +5,9 @@
     "go",
     "python",
     "javascriptreact",
-    "javascript"
+    "javascript",
+    "css",
+    "html"
   ],
   "cSpell.userWords": ["dockerignore", "markdownlint", "signup"],
   "markdownlint.onSave": true,

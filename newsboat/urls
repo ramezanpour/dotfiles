@@ -1,10 +1,17 @@
-https://ramezanpour.net/feed.xml
+
 https://newsboat.org/news.atom
+https://linuxrig.com/feed/
+https://www.apple.com/newsroom/rss-feed.rss
+https://www.deliveryhero.com/feed
 
 http://feeds.hanselman.com/ScottHanselman
+https://ramezanpour.net/feed.xml
 https://lukesmith.xyz/rss.xml
-
 https://www.ianbicking.org/feeds/atom.xml
-https://blog.golang.org/feed.atom
-https://linuxrig.com/feed/
 https://nedbatchelder.com/blog/rss.xml
+https://blog.codinghorror.com/rss/
+
+https://blog.golang.org/feed.atom
+https://feeds.feedburner.com/PythonInsider
+https://www.docker.com/blog/feed/
+https://neovim.io/news.xml
