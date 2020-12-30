@@ -107,6 +107,8 @@ let g:autopep8_on_save = 1
 
 " Airline
 let g:airline_theme='base16'
+" User powerline symbols in Airline
+let g:airline_powerline_fonts = 1
 
 " COC
 " use <tab> for trigger completion and navigate to the next complete item
