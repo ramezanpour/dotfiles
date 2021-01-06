@@ -98,6 +98,7 @@ let g:ctrlp_map = '<c-p>'
 
 " Nerd Tree
 map <C-n> :NERDTreeToggle<CR>
+let NERDTreeShowHidden=1 " Show hidden files in NerdTree buffer.
 set secure
 
 " Clipboard
@@ -138,3 +139,6 @@ vmap <leader>f  <Plug>(coc-format-selected)
 nmap <leader>f  <Plug>(coc-format-selected)
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gv :vsp<CR><Plug>(coc-definition)<C-W>L
+
+" go-vim
+let g:go_imports_autosave = 1 " Auto add imports on save for Golang files.
