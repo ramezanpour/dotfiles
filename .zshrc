@@ -9,6 +9,7 @@ plugins=(
     colored-man-pages
     git-flow
     zsh-completions
+    universalarchive
 )
 
 autoload -U compinit && compinit
@@ -26,7 +27,7 @@ alias u-dot="updateDotFiles.sh"
 alias scripts="cd ~/dev/scripts"
 
 
-export PATH="/usr/local/opt/ruby/bin:$PATH"
+#export PATH="/usr/local/opt/ruby/bin:$PATH"
 export PATH="/usr/local/opt/python@3.9/bin/:$PATH"
 export PATH="$HOME/dev/scripts/:$PATH"
 
