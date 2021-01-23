@@ -142,3 +142,17 @@ nmap <silent> gv :vsp<CR><Plug>(coc-definition)<C-W>L
 
 " go-vim
 let g:go_imports_autosave = 1 " Auto add imports on save for Golang files.
+
+let g:coc_global_extensions = [
+  \ 'coc-spell-checker',
+  \ 'coc-prettier',
+  \ 'coc-git',
+  \ 'coc-tsserver',
+  \ 'coc-markdownlint',
+  \ 'coc-json',
+  \ 'coc-html',
+  \ 'coc-go',
+  \ 'coc-docker',
+  \ 'coc-css',
+  \ 'coc-clangd'
+  \ ]
