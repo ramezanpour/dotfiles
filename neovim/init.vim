@@ -67,7 +67,7 @@ Plug 'vim-airline/vim-airline-themes'
 " A collection of themes for vim
 Plug 'flazz/vim-colorschemes'
 " Standardize Python code library for vim
-Plug 'tell-k/vim-autopep8'
+"Plug 'tell-k/vim-autopep8'
 " The Golang plugin
 Plug 'fatih/vim-go'
 " Better syntax-highlighting for filetypes in vim
@@ -105,8 +105,8 @@ set secure
 set clipboard=unnamed
 
 " Autopep8
-let g:autopep8_disable_show_diff = 1
-let g:autopep8_on_save = 1
+"let g:autopep8_disable_show_diff = 1
+"let g:autopep8_on_save = 1
 
 " Airline
 let g:airline_theme='base16'
@@ -131,8 +131,8 @@ inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
                               \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
 " Code action on <leader>a
-vmap <leader>a <Plug>(coc-codeaction-selected)
-nmap <leader>a <Plug>(coc-codeaction-selected)
+vmap <leader>a <Plug>(coc-codeaction-selected)<CR>
+nmap <leader>a <Plug>(coc-codeaction-selected)<CR>
 
 " Format action on <leader>f
 vmap <leader>f  <Plug>(coc-format-selected)

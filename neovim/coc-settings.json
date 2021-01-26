@@ -12,7 +12,12 @@
     "cpp",
     "py"
   ],
-  "cSpell.userWords": ["dockerignore", "markdownlint", "signup"],
+  "cSpell.userWords": [
+    "Octa",
+    "dockerignore",
+    "markdownlint",
+    "signup"
+  ],
   "markdownlint.onSave": true,
   "markdownlint.config": {
     "MD013": false
@@ -21,5 +26,6 @@
   "go.tags": {
     "transform": "camelcase"
   },
+  "python.linting.flake8Enabled": true,
   "clangd.path": "/Users/mohammad/.config/coc/extensions/coc-clangd-data/install/11.0.0/clangd_11.0.0/bin/clangd"
 }
