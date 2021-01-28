@@ -66,8 +66,6 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 " A collection of themes for vim
 Plug 'flazz/vim-colorschemes'
-" Standardize Python code library for vim
-"Plug 'tell-k/vim-autopep8'
 " The Golang plugin
 Plug 'fatih/vim-go'
 " Better syntax-highlighting for filetypes in vim
@@ -80,6 +78,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'jiangmiao/auto-pairs'
 " Preview markdown inside the browser
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
+Plug 'junegunn/goyo.vim'
 call plug#end()
 
 " Color and syntax highlighting
