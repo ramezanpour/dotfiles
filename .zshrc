@@ -22,7 +22,7 @@ alias vpn="sudo openconnect 162.223.88.26:8443 --servercert pin-sha256:9OzJcVfnM
 alias godev="cd ~/go/src"
 alias edviconf="nvim ~/.config/nvim/init.vim"
 alias vim="nvim"
-alias weather="curl -s 'http://wttr.in/tehran'"
+alias weather="curl -s 'http://wttr.in/tehran?m'"
 alias u-dot="updateDotFiles.sh"
 alias scripts="cd ~/dev/scripts"
 
