@@ -64,8 +64,8 @@ Plug 'scrooloose/nerdtree'
 Plug 'vim-airline/vim-airline'
 " Airline themes
 Plug 'vim-airline/vim-airline-themes'
-" A collection of themes for vim
-Plug 'flazz/vim-colorschemes'
+" Nord
+Plug 'arcticicestudio/nord-vim'
 " The Golang plugin
 Plug 'fatih/vim-go'
 " Better syntax-highlighting for filetypes in vim
