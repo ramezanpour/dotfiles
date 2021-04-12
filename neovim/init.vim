@@ -154,5 +154,6 @@ let g:coc_global_extensions = [
   \ 'coc-go',
   \ 'coc-docker',
   \ 'coc-css',
-  \ 'coc-clangd'
+  \ 'coc-clangd',
+  \ 'coc-yaml'
   \ ]

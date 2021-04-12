@@ -10,9 +10,11 @@
     "html",
     "c",
     "cpp",
-    "py"
+    "py",
+    "yaml"
   ],
   "cSpell.userWords": [
+    "APAC",
     "Bahareh",
     "Kubernetes",
     "Microservice",
@@ -32,6 +34,7 @@
     "transform": "camelcase"
   },
   "python.linting.flake8Enabled": true,
+  "python.linting.flake8Args": ["--config max-line-length=120"],
   "python.formatting.provider": "black",
   "clangd.path": "/Users/mohammad/.config/coc/extensions/coc-clangd-data/install/11.0.0/clangd_11.0.0/bin/clangd"
 }
