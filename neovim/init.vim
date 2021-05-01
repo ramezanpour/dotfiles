@@ -64,12 +64,12 @@ Plug 'scrooloose/nerdtree'
 Plug 'vim-airline/vim-airline'
 " Airline themes
 Plug 'vim-airline/vim-airline-themes'
-" Nord
-Plug 'arcticicestudio/nord-vim'
 " The Golang plugin
 Plug 'fatih/vim-go'
 " Better syntax-highlighting for filetypes in vim
 Plug 'sheerun/vim-polyglot'
+" Nord theme
+Plug 'arcticicestudio/nord-vim'
 " Intellisense engine
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Git integration
@@ -79,18 +79,22 @@ Plug 'jiangmiao/auto-pairs'
 " Preview markdown inside the browser
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 Plug 'junegunn/goyo.vim'
+Plug 'rhysd/git-messenger.vim'
 call plug#end()
 
 " Color and syntax highlighting
+let g:nord_italic = 1
+let g:nord_italic_comments = 1
+let g:nord_cursor_line_number_background = 1
 filetype plugin indent on
 syntax on
 colorscheme nord
 
 " Split windows
-map <C-j> <C-W>j
-map <C-k> <C-W>k
-map <C-h> <C-W>h
-map <C-l> <C-W>l
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-h> <C-w>h
+map <C-l> <C-w>l
 
 " Ctrl-P
 let g:ctrlp_map = '<c-p>' 
@@ -108,11 +112,13 @@ set clipboard=unnamed
 "let g:autopep8_on_save = 1
 
 " Airline
-let g:airline_theme='base16'
+let g:airline_theme='nord'
 " User powerline symbols in Airline
 let g:airline_powerline_fonts = 1
 
-" COC
+
+
+"COC
 " use <tab> for trigger completion and navigate to the next complete item
 function! s:check_back_space() abort
   let col = col('.') - 1
@@ -139,6 +145,7 @@ nmap <leader>f  <Plug>(coc-format-selected)
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gv :vsp<CR><Plug>(coc-definition)<C-W>L
 
+
 " go-vim
 let g:go_imports_autosave = 1 " Auto add imports on save for Golang files.
 
@@ -157,3 +164,4 @@ let g:coc_global_extensions = [
   \ 'coc-clangd',
   \ 'coc-yaml'
   \ ]
+

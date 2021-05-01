@@ -19,17 +19,19 @@
     "Kubernetes",
     "Microservice",
     "Nika",
+    "Nord",
     "Octa",
     "dockerignore",
     "journaling",
     "markdownlint",
     "signup"
   ],
+  "cSpell.allowCompoundWords": true,
   "markdownlint.onSave": true,
   "markdownlint.config": {
     "MD013": false
   },
-  "prettier.singleQuote": true,
+  "prettier.singleQuote": false,
   "go.tags": {
     "transform": "camelcase"
   },
