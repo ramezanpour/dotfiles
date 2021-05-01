@@ -19,6 +19,7 @@ alias tmux="tmux -2"
 
 alias edviconf="nvim ~/.config/nvim/init.vim"
 alias vim="nvim"
+alias k="kubectl"
 
 
 export PATH="$PATH:/usr/local/opt/python@3.8/bin"
