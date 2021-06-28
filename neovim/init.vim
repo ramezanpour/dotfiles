@@ -145,8 +145,12 @@ nmap <leader>a <Plug>(coc-codeaction-selected)<CR>
 " Format action on <leader>f
 vmap <leader>f  <Plug>(coc-format-selected)
 nmap <leader>f  <Plug>(coc-format-selected)
+" coc-related configuration
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gv :vsp<CR><Plug>(coc-definition)<C-W>L
+nmap <silent> gr <Plug>(coc-references)
+nmap <leader>rn <Plug>(coc-rename)
+autocmd CursorHold * silent call CocActionAsync('highlight')
 
 
 " go-vim
