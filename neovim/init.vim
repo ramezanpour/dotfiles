@@ -51,7 +51,7 @@ map <leader>to :tabonly<cr>
 map <leader>tn :tabn<cr>
 map <leader>tp :tabp<cr>
 
-call plug#begin('~/.vim/plugged')
+call plug#begin('~/.config/nvim/plugged')
 
 Plug 'kien/ctrlp.vim'
 " Comment/Uncomment tool
@@ -84,6 +84,7 @@ Plug 'rhysd/git-messenger.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'joshdick/onedark.vim'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 call plug#end()
 
 " Color and syntax highlighting
