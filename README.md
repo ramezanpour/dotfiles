@@ -8,3 +8,10 @@ My dotfiles is one of the simple ones. It contains configuration files for the a
 - Neovim (I recently moved to neovim from vim)
 - Vim (Although I have moved to neovim but I still try to keep my vim configs up-to-date)
 - Newsboat as RSS reader <https://github.com/newsboat/newsboat>
+
+## Dependencies
+
+The `fzf` requires `ag` and `rg` to work properly. Please check the following repositories for more information:
+
+- https://github.com/ggreer/the_silver_searcher
+- https://github.com/BurntSushi/ripgrep
