@@ -143,9 +143,6 @@ inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
 vmap <leader>a <Plug>(coc-codeaction-selected)<CR>
 nmap <leader>a <Plug>(coc-codeaction-selected)<CR>
 
-" Format action on <leader>f
-vmap <leader>f  <Plug>(coc-format-selected)
-nmap <leader>f  <Plug>(coc-format-selected)
 " coc-related configuration
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gv :vsp<CR><Plug>(coc-definition)<C-W>L
@@ -190,3 +187,6 @@ if (empty($TMUX))
     set termguicolors
   endif
 endif
+
+" FZF shortcuts
+nnoremap <silent> <Leader>f :Ag<CR>
