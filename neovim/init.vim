@@ -85,14 +85,15 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'joshdick/onedark.vim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'projekt0n/github-nvim-theme'
 call plug#end()
 
 " Color and syntax highlighting
 filetype plugin indent on
 syntax on
-let g:onedark_terminal_italics=1
-let g:onedark_termcolors=256
-colorscheme onedark
+"let g:onedark_terminal_italics=1
+"let g:onedark_termcolors=256
+colorscheme github_dark_default
 
 " Split windows
 map <C-j> <C-w>j
@@ -116,7 +117,7 @@ set clipboard=unnamed
 "let g:autopep8_on_save = 1
 
 " Airline
-let g:airline_theme='onedark'
+let g:airline_theme='powerlineish'
 " User powerline symbols in Airline
 let g:airline_powerline_fonts = 1
 
