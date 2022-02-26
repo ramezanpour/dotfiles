@@ -68,8 +68,6 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'fatih/vim-go'
 " Better syntax-highlighting for filetypes in vim
 Plug 'sheerun/vim-polyglot'
-" Nord theme
-Plug 'arcticicestudio/nord-vim'
 " Intellisense engine
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Git integration
@@ -78,21 +76,22 @@ Plug 'tpope/vim-fugitive'
 Plug 'jiangmiao/auto-pairs'
 " Preview markdown inside the browser
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
+" Remove distraction from the screen when activated
 Plug 'junegunn/goyo.vim'
+" Show Git blame under the cursor
 Plug 'rhysd/git-messenger.vim'
-
+" Fuzzy search capability
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-Plug 'joshdick/onedark.vim'
+" Better syntax highlighting for different programming languages
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+" Github dark theme
 Plug 'projekt0n/github-nvim-theme'
 call plug#end()
 
 " Color and syntax highlighting
 filetype plugin indent on
 syntax on
-"let g:onedark_terminal_italics=1
-"let g:onedark_termcolors=256
 colorscheme github_dark_default
 
 " Split windows
@@ -110,11 +109,7 @@ let NERDTreeShowHidden=1 " Show hidden files in NerdTree buffer.
 set secure
 
 " Clipboard
-set clipboard=unnamed
-
-" Autopep8
-"let g:autopep8_disable_show_diff = 1
-"let g:autopep8_on_save = 1
+set clipboard=unnamed # Use OS clipboard
 
 " Airline
 let g:airline_theme='powerlineish'
