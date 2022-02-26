@@ -109,7 +109,7 @@ let NERDTreeShowHidden=1 " Show hidden files in NerdTree buffer.
 set secure
 
 " Clipboard
-set clipboard=unnamed # Use OS clipboard
+set clipboard=unnamed  " Use OS clipboard
 
 " Airline
 let g:airline_theme='powerlineish'

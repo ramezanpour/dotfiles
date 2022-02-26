@@ -1,4 +1,4 @@
-export ZSH="/Users/temporaryadmin/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 ZSH_THEME="robbyrussell"
 
@@ -20,4 +20,3 @@ alias tmux="tmux -2"
 alias edviconf="nvim ~/.config/nvim/init.vim"
 alias vim="nvim"
 alias k="kubectl"
-
