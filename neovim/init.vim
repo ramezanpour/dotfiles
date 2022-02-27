@@ -1,8 +1,6 @@
 " Setting the leader
 let mapleader=','
 
-set nocompatible
-
 " General settings
 set title
 set wildmenu
@@ -56,8 +54,6 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'kien/ctrlp.vim'
 " Comment/Uncomment tool
 Plug 'scrooloose/nerdcommenter'
-" Switch to the begining and the end of a block by pressing %
-Plug 'tmhedberg/matchit'
 " A Tree-like side bar for better navigation
 Plug 'scrooloose/nerdtree'
 " A cool status bar
@@ -85,14 +81,14 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 " Better syntax highlighting for different programming languages
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-" Github dark theme
-Plug 'projekt0n/github-nvim-theme'
+Plug 'flazz/vim-colorschemes'
+Plug 'junegunn/goyo.vim'
 call plug#end()
 
 " Color and syntax highlighting
 filetype plugin indent on
 syntax on
-colorscheme github_dark_default
+colorscheme solarized
 
 " Split windows
 map <C-j> <C-w>j
@@ -112,7 +108,7 @@ set secure
 set clipboard=unnamed  " Use OS clipboard
 
 " Airline
-let g:airline_theme='powerlineish'
+let g:airline_theme='solarized'
 " User powerline symbols in Airline
 let g:airline_powerline_fonts = 1
 
@@ -186,3 +182,6 @@ endif
 
 " FZF shortcuts
 nnoremap <silent> <Leader>f :Ag<CR>
+
+" Goyo configurations
+let g:goyo_width = 120
