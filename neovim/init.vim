@@ -70,8 +70,6 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'tpope/vim-fugitive'
 " Auto-close braces and scopes
 Plug 'jiangmiao/auto-pairs'
-" Preview markdown inside the browser
-Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 " Remove distraction from the screen when activated
 Plug 'junegunn/goyo.vim'
 " Show Git blame under the cursor
@@ -81,14 +79,21 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 " Better syntax highlighting for different programming languages
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-Plug 'flazz/vim-colorschemes'
+" Distraction-free writing
 Plug 'junegunn/goyo.vim'
+" Markdown
+Plug 'godlygeek/tabular'
+Plug 'preservim/vim-markdown'
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
+Plug 'arcticicestudio/nord-vim'
+Plug 'ryanoasis/vim-devicons'
 call plug#end()
 
 " Color and syntax highlighting
 filetype plugin indent on
 syntax on
-colorscheme solarized
+set background=dark
+colorscheme nord
 
 " Split windows
 map <C-j> <C-w>j
@@ -108,7 +113,7 @@ set secure
 set clipboard=unnamed  " Use OS clipboard
 
 " Airline
-let g:airline_theme='solarized'
+let g:airline_theme='nord'
 " User powerline symbols in Airline
 let g:airline_powerline_fonts = 1
 
@@ -185,3 +190,5 @@ nnoremap <silent> <Leader>f :Ag<CR>
 
 " Goyo configurations
 let g:goyo_width = 120
+" Vim Markdown
+let g:vim_markdown_folding_disabled = 1
