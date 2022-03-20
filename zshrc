@@ -9,6 +9,9 @@ plugins=(
     kubectl
     colored-man-pages
     git-flow
+    colorize
+    direnv
+    tmux
 )
 
 autoload -U compinit && compinit
