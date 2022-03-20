@@ -85,7 +85,9 @@ Plug 'junegunn/goyo.vim'
 Plug 'godlygeek/tabular'
 Plug 'preservim/vim-markdown'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
+" Nord theme
 Plug 'arcticicestudio/nord-vim'
+" Some fancy nerd icons 
 Plug 'ryanoasis/vim-devicons'
 call plug#end()
 
