@@ -5,11 +5,17 @@ MODE=$1
 
 FILE_NAME=$(date "+%Y-%m-%d.md")
 
+commit_changes() {
+	CURRENT_WD=$(pwd)
+	cd $1 && git add $2 && git commit -m "Change $2" && git push && cd $CURRENT_WD
+}
+
 create_file() {
 	FULL_PATH="$1/$2"
 	# echo $FULL_PATH
-	nvim $FULL_PATH
+	nvim $FULL_PATH && commit_changes $1 $2
 }
+
 
 if [ "$MODE" = "j" ]; then
 	if [[ -z $JOURNALS_PATH ]]; then
