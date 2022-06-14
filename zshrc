@@ -23,3 +23,8 @@ alias tmux="tmux -2"
 alias edviconf="nvim ~/.config/nvim/init.vim"
 alias vim="nvim"
 alias k="kubectl"
+
+export NOTES_PATH="$HOME/notes"
+export JOURNALS_PATH="$HOME/journals"
+
+
