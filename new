@@ -1,0 +1,33 @@
+#!/bin/bash
+# vi: ft=sh
+
+MODE=$1
+
+FILE_NAME=$(date "+%Y-%m-%d.md")
+
+create_file() {
+	FULL_PATH="$1/$2"
+	# echo $FULL_PATH
+	nvim $FULL_PATH
+}
+
+if [ "$MODE" = "j" ]; then
+	if [[ -z $JOURNALS_PATH ]]; then
+		echo "JOURNALS_PATH is not defined"
+		exit 1
+	fi
+
+	create_file $JOURNALS_PATH $FILE_NAME
+	
+elif [ "$MODE" = "n" ]; then
+	if [[ -z $NOTES_PATH ]]; then
+		echo "NOTES_PATH is not defined"
+		exit 1
+	fi
+
+	create_file $NOTES_PATH $FILE_NAME
+
+else
+	echo "Unknown command"
+	exit 1
+fi
