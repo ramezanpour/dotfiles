@@ -10,6 +10,11 @@ commit_changes() {
 	cd $1 && git add $2 && git commit -m "Change $2" && git push -q && cd $CURRENT_WD
 }
 
+pull_changes() {
+	CURRENT_WD=$(pwd)
+	cd $1 && git pull -q && cd $CURRENT_WD
+}
+
 create_file() {
 	FULL_PATH="$1/$2"
 	# echo $FULL_PATH
@@ -17,22 +22,23 @@ create_file() {
 }
 
 
+if [[ -z $JOURNALS_PATH ]]; then
+	echo "JOURNALS_PATH is not defined"
+	exit 1
+fi
+if [[ -z $NOTES_PATH ]]; then
+	echo "NOTES_PATH is not defined"
+	exit 1
+fi
 if [ "$MODE" = "j" ]; then
-	if [[ -z $JOURNALS_PATH ]]; then
-		echo "JOURNALS_PATH is not defined"
-		exit 1
-	fi
-
 	create_file $JOURNALS_PATH $FILE_NAME
 	
 elif [ "$MODE" = "n" ]; then
-	if [[ -z $NOTES_PATH ]]; then
-		echo "NOTES_PATH is not defined"
-		exit 1
-	fi
-
 	create_file $NOTES_PATH $FILE_NAME
-
+elif [ "$MODE" = "sync" ]; then
+	pull_changes $JOURNALS_PATH
+	pull_changes $NOTES_PATH
+	echo "Syncd!"
 else
 	echo "Unknown command"
 	exit 1
