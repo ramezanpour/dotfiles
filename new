@@ -21,6 +21,10 @@ create_file() {
 	nvim $FULL_PATH && commit_changes $1 $2
 }
 
+search() {
+	grep -RIin "$1" $2 --colour | grep -v "(Done)"
+}
+
 
 if [[ -z $JOURNALS_PATH ]]; then
 	echo "JOURNALS_PATH is not defined"
@@ -39,6 +43,10 @@ elif [ "$MODE" = "sync" ]; then
 	pull_changes $JOURNALS_PATH
 	pull_changes $NOTES_PATH
 	echo "Syncd!"
+elif [ "$MODE" = "search" ]; then
+	search $2 $JOURNALS_PATH
+	search $2 $NOTES_PATH
+	echo "Search Finsihed!"
 else
 	echo "Unknown command"
 	exit 1
