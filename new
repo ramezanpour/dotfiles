@@ -21,6 +21,13 @@ create_file() {
 	nvim $FULL_PATH && commit_changes $1 $2
 }
 
+create_note() {
+	FULL_PATH="$1/notes.md"
+	# echo $FULL_PATH
+	nvim $FULL_PATH && commit_changes $1 notes.md
+}
+
+
 search() {
 	grep -RIin "$1" $2 --colour | grep -v "(Done)"
 }
@@ -38,7 +45,7 @@ if [ "$MODE" = "j" ]; then
 	create_file $JOURNALS_PATH $FILE_NAME
 	
 elif [ "$MODE" = "n" ]; then
-	create_file $NOTES_PATH $FILE_NAME
+	create_note $NOTES_PATH
 elif [ "$MODE" = "sync" ]; then
 	pull_changes $JOURNALS_PATH
 	pull_changes $NOTES_PATH
