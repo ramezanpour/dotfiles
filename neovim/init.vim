@@ -186,9 +186,9 @@ let g:coc_global_extensions = [
   \ 'coc-docker',
   \ 'coc-css',
   \ 'coc-clangd',
-  \ 'coc-yaml'
+  \ 'coc-yaml',
   \ 'coc-sh',
-  \ 'coc-highlighting',
+  \ 'coc-highlight',
   \ ]
 
 "Use 24-bit (true-color) mode in Vim/Neovim when outside tmux.
