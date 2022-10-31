@@ -1,6 +1,0 @@
-browser open
-color listfocus color0 color4
-color info red black
-
-bind-key j down
-bind-key k up
