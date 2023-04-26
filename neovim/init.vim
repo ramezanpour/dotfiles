@@ -18,6 +18,7 @@ set number
 set noerrorbells
 set novisualbell
 set cursorline
+set signcolumn=yes
 
 call plug#begin('~/.config/nvim/plugged')
 Plug 'arcticicestudio/nord-vim'
@@ -95,6 +96,17 @@ function! CheckBackspace() abort
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
 
+" GoTo code navigation
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gv :vsp<CR><Plug>(coc-definition)<C-W>L
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+
+vmap <leader>a <Plug>(coc-codeaction-selected)<CR>
+nmap <leader>a <Plug>(coc-codeaction-selected)<CR>
+
+
 
 let g:coc_global_extensions = [
   \ 'coc-spell-checker',
@@ -111,4 +123,5 @@ let g:coc_global_extensions = [
   \ 'coc-clangd',
   \ 'coc-yaml',
   \ 'coc-sh',
+  \ 'coc-highlight',
   \ ]

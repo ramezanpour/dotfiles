@@ -1,4 +1,6 @@
 {
+  "suggest.noselect": true,
+  "colors.enable": true,
   "cSpell.allowCompoundWords": true,
   "markdownlint.onSave": true,
   "markdownlint.config": {
