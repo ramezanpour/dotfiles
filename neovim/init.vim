@@ -18,6 +18,7 @@ set number
 set noerrorbells
 set novisualbell
 set termguicolors
+set cursorline
 
 call plug#begin('~/.config/nvim/plugged')
 
@@ -112,9 +113,14 @@ endfunction
 autocmd CursorHold * silent call CocActionAsync('highlight')
 
 " Airline
-let g:airline_theme='base16'
+let g:airline_theme='nord'
 " User powerline symbols in Airline
 let g:airline_powerline_fonts = 1
+
+" Nord theme specific configs
+let g:nord_cursor_line_number_background = 1
+let g:nord_italic = 1
+set background=dark
 
 let g:coc_global_extensions = [
   \ 'coc-spell-checker',
