@@ -21,10 +21,9 @@ source $ZSH/oh-my-zsh.sh
 alias tmux="tmux -2"
 
 alias edviconf="nvim ~/.config/nvim/init.vim"
+alias edtmuxconf="nvim ~/.tmux.conf"
+alias edzshconf="nvim ~/.zshrc"
+
 alias vim="nvim"
 alias k="kubectl"
-
-export NOTES_PATH="$HOME/notes"
-export JOURNALS_PATH="$HOME/journals"
-
 
