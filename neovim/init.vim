@@ -22,7 +22,6 @@ set cursorline
 
 call plug#begin('~/.config/nvim/plugged')
 
-Plug 'arcticicestudio/nord-vim'
 Plug 'ryanoasis/vim-devicons'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'rhysd/git-messenger.vim'
@@ -37,13 +36,29 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
 Plug 'jiangmiao/auto-pairs'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'nordtheme/vim'
+"Plug 'nordtheme/vim'
+Plug 'NLKNguyen/papercolor-theme'
 
 call plug#end()
 
 filetype plugin indent on
 syntax on
-colorscheme nord
+
+" Nord theme specific configs
+"let g:nord_cursor_line_number_background = 1
+"let g:nord_italic = 1
+let g:PaperColor_Theme_Options = {
+  \   'theme': {
+  \     'default.dark': {
+  \       'override' : {
+  \         'color00' : ['#080808', '232'],
+  \         'linenumber_bg' : ['#080808', '232']
+  \       }
+  \     }
+  \   }
+  \ }
+set background=dark
+colorscheme PaperColor
 
 
 "set listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<
@@ -113,14 +128,10 @@ endfunction
 autocmd CursorHold * silent call CocActionAsync('highlight')
 
 " Airline
-let g:airline_theme='nord'
+let g:airline_theme='papercolor'
 " User powerline symbols in Airline
 let g:airline_powerline_fonts = 1
 
-" Nord theme specific configs
-let g:nord_cursor_line_number_background = 1
-let g:nord_italic = 1
-set background=dark
 
 let g:coc_global_extensions = [
   \ 'coc-spell-checker',
