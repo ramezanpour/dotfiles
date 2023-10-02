@@ -142,6 +142,8 @@ let g:coc_global_extensions = [
   \ 'coc-markdownlint',
   \ 'coc-json',
   \ 'coc-html',
+  \ 'coc-css',
+  \ 'coc-eslint',
   \ 'coc-go',
   \ 'coc-docker',
   \ 'coc-css',
