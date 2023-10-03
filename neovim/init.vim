@@ -38,6 +38,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 "Plug 'nordtheme/vim'
 Plug 'NLKNguyen/papercolor-theme'
+Plug 'junegunn/goyo.vim'
 
 call plug#end()
 
