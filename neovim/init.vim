@@ -1,4 +1,3 @@
-" Setting the leader
 let mapleader=','
 
 set wrap
@@ -36,8 +35,7 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
 Plug 'jiangmiao/auto-pairs'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-"Plug 'nordtheme/vim'
-Plug 'NLKNguyen/papercolor-theme'
+Plug 'nordtheme/vim'
 Plug 'junegunn/goyo.vim'
 
 call plug#end()
@@ -46,8 +44,8 @@ filetype plugin indent on
 syntax on
 
 " Nord theme specific configs
-"let g:nord_cursor_line_number_background = 1
-"let g:nord_italic = 1
+let g:nord_cursor_line_number_background = 1
+let g:nord_italic = 1
 let g:PaperColor_Theme_Options = {
   \   'theme': {
   \     'default.dark': {
@@ -59,7 +57,7 @@ let g:PaperColor_Theme_Options = {
   \   }
   \ }
 set background=dark
-colorscheme PaperColor
+colorscheme nord
 
 
 "set listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<
@@ -129,7 +127,7 @@ endfunction
 autocmd CursorHold * silent call CocActionAsync('highlight')
 
 " Airline
-let g:airline_theme='papercolor'
+let g:airline_theme='nord'
 " User powerline symbols in Airline
 let g:airline_powerline_fonts = 1
 
