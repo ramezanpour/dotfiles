@@ -27,7 +27,7 @@ Plug 'rhysd/git-messenger.vim'
 Plug 'fatih/vim-go'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree'
-Plug 'kien/ctrlp.vim'
+"Plug 'kien/ctrlp.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -37,6 +37,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'nordtheme/vim'
 Plug 'junegunn/goyo.vim'
+Plug 'romainl/vim-cool'
 
 call plug#end()
 
@@ -72,7 +73,7 @@ map <C-h> <C-w>h
 map <C-l> <C-w>l
 
 " Ctrl-P
-let g:ctrlp_map = '<c-p>' 
+"let g:ctrlp_map = '<c-p>' 
 
 " Nerd Tree
 map <C-n> :NERDTreeToggle<CR>
@@ -84,6 +85,7 @@ let g:go_imports_autosave = 1 " Auto add imports on save for Golang files.
 
 " FZF shortcuts
 nnoremap <silent> <Leader>f :Ag<CR>
+nnoremap <silent> <C-p> :Files<CR>
 
 " Coc configuration
 function! CheckBackspace() abort
@@ -150,4 +152,5 @@ let g:coc_global_extensions = [
   \ 'coc-yaml',
   \ 'coc-sh',
   \ 'coc-highlight',
+  \ 'coc-flutter',
   \ ]
