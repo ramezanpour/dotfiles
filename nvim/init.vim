@@ -27,7 +27,6 @@ Plug 'rhysd/git-messenger.vim'
 Plug 'fatih/vim-go'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree'
-"Plug 'kien/ctrlp.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -47,33 +46,14 @@ syntax on
 " Nord theme specific configs
 let g:nord_cursor_line_number_background = 1
 let g:nord_italic = 1
-let g:PaperColor_Theme_Options = {
-  \   'theme': {
-  \     'default.dark': {
-  \       'override' : {
-  \         'color00' : ['#080808', '232'],
-  \         'linenumber_bg' : ['#080808', '232']
-  \       }
-  \     }
-  \   }
-  \ }
 set background=dark
 colorscheme nord
-
-
-"set listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<
-"set list
-
-
 
 " Split windows
 map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-h> <C-w>h
 map <C-l> <C-w>l
-
-" Ctrl-P
-"let g:ctrlp_map = '<c-p>' 
 
 " Nerd Tree
 map <C-n> :NERDTreeToggle<CR>
