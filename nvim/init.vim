@@ -37,7 +37,8 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'nordtheme/vim'
 Plug 'junegunn/goyo.vim'
 Plug 'romainl/vim-cool'
-
+Plug 'ap/vim-css-color'
+Plug 'rmehri01/onenord.nvim', { 'branch': 'main' }
 call plug#end()
 
 filetype plugin indent on
@@ -47,7 +48,7 @@ syntax on
 let g:nord_cursor_line_number_background = 1
 let g:nord_italic = 1
 set background=dark
-colorscheme nord
+colorscheme onenord
 
 " Split windows
 map <C-j> <C-w>j
@@ -109,7 +110,7 @@ endfunction
 autocmd CursorHold * silent call CocActionAsync('highlight')
 
 " Airline
-let g:airline_theme='nord'
+let g:airline_theme='deus'
 " User powerline symbols in Airline
 let g:airline_powerline_fonts = 1
 
