@@ -27,3 +27,4 @@ alias edzshconf="nvim ~/.zshrc"
 alias vim="nvim"
 alias k="kubectl"
 
+export GPG_TTY=$(tty)
