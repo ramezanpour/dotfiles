@@ -109,8 +109,20 @@ endfunction
 " Highlight the symbol and its references when holding the cursor.
 autocmd CursorHold * silent call CocActionAsync('highlight')
 autocmd VimEnter * TSEnable highlight
+" Treesitter settings
+lua << EOF
+require("nvim-treesitter.configs").setup({
+    ensure_installed = { "javascript", "typescript", "lua", "vim", "json", "html", "go", "tsx", "python", "vimdoc" },
+    sync_install = false,
+    auto_install = true,
+    highlight = {
+        enable = true,
+    },
+})
+EOF
 
-" Airline
+
+" " Airline
 let g:airline_theme='deus'
 " User powerline symbols in Airline
 let g:airline_powerline_fonts = 1
