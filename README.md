@@ -13,5 +13,5 @@ My dotfiles is one of the simple ones. It contains configuration files for the a
 
 The `fzf` requires `ag` and `rg` to work properly. Please check the following repositories for more information:
 
-- https://github.com/ggreer/the_silver_searcher
-- https://github.com/BurntSushi/ripgrep
+- <https://github.com/ggreer/the_silver_searcher>
+- <https://github.com/BurntSushi/ripgrep>

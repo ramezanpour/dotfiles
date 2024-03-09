@@ -72,6 +72,10 @@ let g:go_imports_autosave = 1 " Auto add imports on save for Golang files.
 nnoremap <silent> <Leader>f :Ag<CR>
 nnoremap <silent> <C-p> :Files<CR>
 
+" Goyo
+let g:goyo_width = 120
+
+
 " Coc configuration
 function! CheckBackspace() abort
   let col = col('.') - 1
