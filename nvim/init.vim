@@ -61,6 +61,9 @@ map <C-n> :NERDTreeToggle<CR>
 let NERDTreeShowHidden=1 " Show hidden files in NerdTree buffer.
 set secure
 
+" Nerd commenter
+let g:NERDCompactSexyComs = 1
+
 " go-vim
 let g:go_imports_autosave = 1 " Auto add imports on save for Golang files.
 
