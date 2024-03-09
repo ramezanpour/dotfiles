@@ -59,6 +59,7 @@ map <C-l> <C-w>l
 " Nerd Tree
 map <C-n> :NERDTreeToggle<CR>
 let NERDTreeShowHidden=1 " Show hidden files in NerdTree buffer.
+autocmd VimEnter * NERDTree | wincmd p " Automatically run NerTree when vim starts
 set secure
 
 " Nerd commenter
