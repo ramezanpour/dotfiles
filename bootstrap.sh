@@ -1,15 +1,8 @@
 #!/bin/bash
 
-# Install Homebrew
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-
 # Install tmux theme
 mkdir -p ~/.tmux/themes
 git clone https://github.com/arcticicestudio/nord-tmux ~/.tmux/themes/nord-tmux
-
-# This is a requirement for OMZ colorize plugin
-pip3 install Pygments
-
 
 # Download the Nord theme for iterm to the Downloads folder so that it can be applied
 curl --output-dir ~/Downloads -O https://github.com/nordtheme/iterm2/blob/develop/src/xml/Nord.itermcolors
@@ -41,3 +34,6 @@ cp -n ./tmux/tmux.conf ~/.config/tmux/tmux.conf
 
 mkdir -p ~/.oh-my-zsh/themes
 cp -n ./oh-my-zsh/themes/agnoster-moh.zsh-theme ~/.oh-my-zsh/themes/agnoster-moh.zsh-theme
+
+# Zsh completion
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions

@@ -13,6 +13,7 @@ plugins=(
     direnv
     tmux
     aws
+    zsh-autosuggestions
 )
 
 autoload -U compinit && compinit
