@@ -22,6 +22,7 @@ curl --output-dir ~/ -O https://gist.githubusercontent.com/lifepillar/09a44b8cf0
 # Some nvim plugins require yarn to be installed
 npm install -g yarn
 
+
 # Install vim Plugged
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
