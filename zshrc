@@ -1,6 +1,6 @@
 export ZSH="$HOME/.oh-my-zsh"
 
-ZSH_THEME="agnoster-moh"
+export ZSH_THEME="robbyrussell"
 
 plugins=(
     git
@@ -13,7 +13,6 @@ plugins=(
     direnv
     tmux
     aws
-    zsh-autosuggestions
 )
 
 autoload -U compinit && compinit
@@ -29,7 +28,9 @@ alias vim="nvim"
 alias k="kubectl"
 alias c="clear"
 
-export PATH=$HOME/flutter/bin:$PATH
-export PATH="/opt/homebrew/opt/ruby@2.7/bin:$PATH"
+export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
 
 export GPG_TTY=$(tty)
+export LANG=en-US.UTF-8
+export LC_ALL=en_US.UTF-8
+source ~/.config/nvim/plugged/gruvbox/gruvbox_256palette_osx.sh
