@@ -24,7 +24,6 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'ryanoasis/vim-devicons'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'rhysd/git-messenger.vim'
-Plug 'fatih/vim-go'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -35,20 +34,18 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'nordtheme/vim'
-Plug 'junegunn/goyo.vim'
 Plug 'romainl/vim-cool'
 Plug 'ap/vim-css-color'
-Plug 'rmehri01/onenord.nvim', { 'branch': 'main' }
+Plug 'morhetz/gruvbox'
 call plug#end()
 
 filetype plugin indent on
 syntax on
 
 " Nord theme specific configs
-let g:nord_cursor_line_number_background = 1
-let g:nord_italic = 1
 set background=dark
-colorscheme onenord
+let g:gruvbox_italic=1
+colorscheme gruvbox
 
 " Split windows
 map <C-j> <C-w>j
@@ -59,12 +56,14 @@ map <C-l> <C-w>l
 " Nerd Tree
 map <C-n> :NERDTreeToggle<CR>
 let NERDTreeShowHidden=1 " Show hidden files in NerdTree buffer.
-autocmd VimEnter * NERDTree | wincmd p " Automatically run NerTree when vim starts
+
 autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1
     \ && exists('b:NERDTree') && b:NERDTree.isTabTree() | q | endif
+
 " kill tab if only NERDTree is left
 autocmd BufEnter * if winnr('$') == 1 && exists('b:NERDTree')
     \ && b:NERDTree.isTabTree() | quit | endif
+
 " If another buffer tries to replace NERDTree, put it in the other window, and bring back NERDTree.
 autocmd BufEnter * if bufname('#') =~ 'NERD_tree_\d\+'
     \ && bufname('%') !~ 'NERD_tree_\d\+' && winnr('$') > 1 | let buf=bufnr() |
@@ -75,16 +74,11 @@ set secure
 " Nerd commenter
 let g:NERDCompactSexyComs = 1
 
-" go-vim
-let g:go_imports_autosave = 1 " Auto add imports on save for Golang files.
 
 " FZF shortcuts
 nnoremap <silent> <Leader>f :Ag<CR>
 nnoremap <silent> <C-p> :Files<CR>
 nnoremap <silent> <Leader><Space> :BLines<cr>
-
-" Goyo
-let g:goyo_width = 120
 
 
 " Coc configuration
@@ -141,14 +135,14 @@ require("nvim-treesitter.configs").setup({
 EOF
 
 
-" " Airline
-let g:airline_theme='deus'
+" Airline
+let g:airline_theme='gruvbox'
+
 " User powerline symbols in Airline
 let g:airline_powerline_fonts = 1
 
 
 let g:coc_global_extensions = [
-  \ 'coc-spell-checker',
   \ 'coc-prettier',
   \ 'coc-git',
   \ 'coc-tsserver',
@@ -158,12 +152,9 @@ let g:coc_global_extensions = [
   \ 'coc-html',
   \ 'coc-css',
   \ 'coc-eslint',
-  \ 'coc-go',
   \ 'coc-docker',
   \ 'coc-css',
-  \ 'coc-clangd',
   \ 'coc-yaml',
   \ 'coc-sh',
   \ 'coc-highlight',
-  \ 'coc-flutter',
   \ ]
