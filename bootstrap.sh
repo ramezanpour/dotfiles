@@ -1,13 +1,7 @@
 #!/bin/bash
 
-# Install tmux theme
-mkdir -p ~/.tmux/themes
-git clone https://github.com/arcticicestudio/nord-tmux ~/.tmux/themes/nord-tmux
-
-# Download the Nord theme for iterm to the Downloads folder so that it can be applied
-curl --output-dir ~/Downloads -O https://github.com/nordtheme/iterm2/blob/develop/src/xml/Nord.itermcolors
-
-open ~/Downloads/Nord.itermcolors
+# Install TPM
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 # Download 24-bit test script to the home folder
 curl --output-dir ~/ -O https://gist.githubusercontent.com/lifepillar/09a44b8cf0f9397465614e622979107f/raw/24-bit-color.sh
