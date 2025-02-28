@@ -36,16 +36,18 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'nordtheme/vim'
 Plug 'romainl/vim-cool'
 Plug 'ap/vim-css-color'
-Plug 'morhetz/gruvbox'
+Plug 'arcticicestudio/nord-vim'
 call plug#end()
 
 filetype plugin indent on
 syntax on
 
 " Nord theme specific configs
+let g:nord_cursor_line_number_background = 1
+let g:nord_bold_vertical_split_line = 1
+let g:nord_italic_comments = 1
 set background=dark
-let g:gruvbox_italic=1
-colorscheme gruvbox
+colorscheme nord
 
 " Split windows
 map <C-j> <C-w>j
@@ -136,7 +138,7 @@ EOF
 
 
 " Airline
-let g:airline_theme='gruvbox'
+let g:airline_theme='nord'
 
 " User powerline symbols in Airline
 let g:airline_powerline_fonts = 1
