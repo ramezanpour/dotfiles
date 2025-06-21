@@ -22,7 +22,7 @@ set cursorline
 call plug#begin('~/.config/nvim/plugged')
 
 Plug 'ryanoasis/vim-devicons'
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+
 Plug 'rhysd/git-messenger.vim'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree'
