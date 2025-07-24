@@ -1,0 +1,7 @@
+Host personal
+  HostName 91.99.25.163
+  User root
+  Port 22
+
+Host *
+  IdentityAgent "~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"
