@@ -1,0 +1,15 @@
+# This is Git's per-user configuration file.
+[user]
+# Please adapt and uncomment the following lines:
+	name = Mohammad M. Ramezanpour
+	email = i@ramezanpour.net
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILjHjzRPMbQkbUw51OOFJ90Wqu2Pz/oI9P/9jajeuAX5
+
+[core]
+	editor = nvim
+[gpg]
+	format = ssh
+[gpg "ssh"]
+	program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
+[commit]
+	gpgsign = true
