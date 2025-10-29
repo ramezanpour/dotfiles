@@ -8,5 +8,5 @@ return {
 			-- e.g. theme = "dark", borders = true, etc.
 		})
 		vim.cmd.colorscheme("onenord") -- set the colorscheme
-	end,
+	end
 }
