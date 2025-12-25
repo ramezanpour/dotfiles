@@ -6,7 +6,19 @@ return {
 			"mason-org/mason-lspconfig.nvim",
 		},
 		config = function()
-			local packages = { "prettier", "pyright", "ruff", "eslint_d", "stylua", "markdownlint", "lua_ls" }
+			local packages = {
+				"prettier",
+				"pyrefly",
+				"ruff",
+				"eslint_d",
+				"stylua",
+				"markdownlint",
+				"lua_ls",
+				"gopls",
+				"goimports",
+				"gofumpt",
+				"eslint-lsp",
+			}
 			require("mason").setup({
 				ensure_installed = packages,
 			})
@@ -34,6 +46,7 @@ return {
 					typescript = { "prettier" },
 					json = { "prettier" },
 					markdown = { "prettier" },
+					go = { "gofumpt" },
 				},
 			})
 		end,
