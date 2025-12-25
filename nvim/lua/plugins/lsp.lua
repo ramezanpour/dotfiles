@@ -47,6 +47,8 @@ return {
 					json = { "prettier" },
 					markdown = { "prettier" },
 					go = { "gofumpt" },
+					html = { "prettier" },
+					css = { "prettier" },
 				},
 			})
 		end,

@@ -23,3 +23,5 @@ vim.o.splitright = true
 vim.cmd("filetype plugin indent on")
 vim.o.updatetime = 250
 vim.opt.laststatus = 3
+vim.opt.spell = true
+vim.opt.spelllang = { "en", "de" }

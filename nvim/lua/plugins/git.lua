@@ -32,4 +32,7 @@ return {
 			end, { desc = "Copy Git URL to clipboard (selection)" })
 		end,
 	},
+	{
+		"tpope/vim-fugitive",
+	},
 }
