@@ -46,9 +46,9 @@ return {
 					typescript = { "prettier" },
 					json = { "prettier" },
 					markdown = { "prettier" },
-					go = { "gofumpt" },
 					html = { "prettier" },
 					css = { "prettier" },
+					go = { "gofumpt" },
 				},
 			})
 		end,
