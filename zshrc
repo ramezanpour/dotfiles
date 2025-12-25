@@ -16,8 +16,9 @@ alias vim="nvim"
 alias k="kubectl"
 alias c="clear"
 alias gs="git status"
-alias gaa="git add ."
+alias ga="git add ."
 alias gc="git commit"
+alias gp="git push"
 
 export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
 
