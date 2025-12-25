@@ -3,7 +3,6 @@ export ZSH="$HOME/.oh-my-zsh"
 export ZSH_THEME="robbyrussell"
 
 plugins=(
-    git
     colored-man-pages
     colorize
 )
