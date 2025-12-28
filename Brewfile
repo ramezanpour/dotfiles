@@ -20,4 +20,5 @@ cask "netnewswire"
 cask "obs"
 cask "whatsapp"
 cask "telegram"
+cask "todoist-app"
 
