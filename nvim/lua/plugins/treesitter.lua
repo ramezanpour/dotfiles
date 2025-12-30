@@ -5,7 +5,7 @@ return {
 	config = function()
 		require("nvim-treesitter.configs").setup({
 			-- List the languages you want to install
-			ensure_installed = { "c", "vimdoc", "python", "javascript", "html", "css" },
+			ensure_installed = { "c", "vimdoc", "python", "javascript", "typescript", "tsx", "html", "css" },
 			sync_install = false,
 			auto_install = true,
 

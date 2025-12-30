@@ -4,6 +4,7 @@ return {
 		"hrsh7th/nvim-cmp",
 		dependencies = {
 			"hrsh7th/cmp-nvim-lsp", -- LSP source
+			"hrsh7th/cmp-nvim-lsp-signature-help", -- LSP signature help source
 			"hrsh7th/cmp-buffer", -- buffer source
 			"hrsh7th/cmp-path", -- path source
 			"hrsh7th/cmp-cmdline", -- cmdline source
@@ -50,6 +51,7 @@ return {
 				}),
 				sources = cmp.config.sources({
 					{ name = "nvim_lsp" },
+					{ name = "nvim_lsp_signature_help" },
 					{ name = "luasnip" },
 				}, {
 					{ name = "buffer" },
