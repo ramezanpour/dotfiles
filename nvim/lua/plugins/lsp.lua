@@ -8,7 +8,7 @@ return {
 		config = function()
 			local packages = {
 				"prettier",
-				"pyrefly",
+				"pyright",
 				"ruff",
 				"eslint_d",
 				"stylua",
