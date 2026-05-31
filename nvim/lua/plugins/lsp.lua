@@ -4,22 +4,11 @@ return {
 		dependencies = {
 			"mason-org/mason.nvim",
 			"mason-org/mason-lspconfig.nvim",
+			"WhoIsSethDaniel/mason-tool-installer.nvim",
 			"hrsh7th/cmp-nvim-lsp",
 		},
 		config = function()
 			local ts_server = vim.lsp.config and "ts_ls" or "tsserver"
-			local packages = {
-				"prettier",
-				"pyright",
-				"ruff",
-				"isort",
-				"eslint_d",
-				"stylua",
-				"markdownlint",
-				"goimports",
-				"gofumpt",
-				"typescript-language-server",
-			}
 			local lsp_servers = {
 				"pyright",
 				"lua_ls",
@@ -27,8 +16,27 @@ return {
 				"eslint",
 				ts_server,
 			}
-			require("mason").setup({
-				ensure_installed = packages,
+			require("mason").setup()
+			require("mason-tool-installer").setup({
+				ensure_installed = {
+					-- LSP servers
+					"pyright",
+					"lua-language-server",
+					"gopls",
+					"typescript-language-server",
+					-- Formatters
+					"prettier",
+					"stylua",
+					"ruff",
+					"isort",
+					"gofumpt",
+					"goimports",
+					-- Linters
+					"eslint_d",
+					"markdownlint",
+				},
+				auto_update = false,
+				run_on_start = true,
 			})
 			require("mason-lspconfig").setup({
 				ensure_installed = lsp_servers,
