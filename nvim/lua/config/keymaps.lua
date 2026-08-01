@@ -11,6 +11,7 @@ vim.keymap.set("n", "<leader>fh", builtin.help_tags, { desc = "Telescope help ta
 vim.keymap.set({ "n", "v" }, "c", '"_c', { noremap = true })
 vim.keymap.set({ "n", "v" }, "C", '"_C', { noremap = true })
 
+local opts = { noremap = true, silent = true }
 vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
 vim.keymap.set("n", "gv", function()
 	vim.cmd("vsplit")

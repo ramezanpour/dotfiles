@@ -34,6 +34,7 @@ return {
 					-- Linters
 					"eslint_d",
 					"markdownlint",
+					"golangci-lint",
 				},
 				auto_update = false,
 				run_on_start = true,
@@ -147,6 +148,7 @@ return {
 				javascript = { "eslint_d" },
 				typescript = { "eslint_d" },
 				markdown = { "markdownlint" },
+				go = { "golangcilint" },
 			}
 
 			-- Automatically lint on save
@@ -161,7 +163,7 @@ return {
 		"linux-cultist/venv-selector.nvim",
 		dependencies = {
 			"neovim/nvim-lspconfig",
-			{ "nvim-telescope/telescope.nvim", branch = "0.1.x", dependencies = { "nvim-lua/plenary.nvim" } }, -- optional: you can also use fzf-lua, snacks, mini-pick instead.
+			{ "nvim-telescope/telescope.nvim", branch = "master", dependencies = { "nvim-lua/plenary.nvim" } }, -- optional: you can also use fzf-lua, snacks, mini-pick instead.
 		},
 		ft = "python", -- Load when opening Python files
 		keys = {
