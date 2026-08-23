@@ -120,7 +120,7 @@ return {
 		config = function()
 			require("conform").setup({
 				format_on_save = {
-					lsp_fallback = true,
+					lsp_format = "fallback",
 					timeout_ms = 1000,
 				},
 				formatters_by_ft = {
@@ -131,6 +131,7 @@ return {
 					json = { "prettier" },
 					markdown = { "prettier" },
 					html = { "prettier" },
+					htmldjango = { "prettier" },
 					css = { "prettier" },
 					go = { "gofumpt", "goimports" },
 				},
