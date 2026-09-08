@@ -31,3 +31,11 @@ export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init - zsh)"
 
+export HOMEBREW_GITHUB_API_TOKEN=$(gh auth token) 
+
+export PATH="$HOME/.local/bin:$PATH"
+
+if [ -f ~/.localvars.sh ]; then
+    source ~/.localvars.sh
+    echo "local settings loaded"
+fi
