@@ -38,4 +38,6 @@ export PATH="$HOME/.local/bin:$PATH"
 if [ -f ~/.localvars.sh ]; then
     source ~/.localvars.sh
     echo "local settings loaded"
+else
+    echo "no local config found."
 fi
