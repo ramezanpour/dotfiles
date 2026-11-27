@@ -1,0 +1,7 @@
+# ClearMind blocklist v2: site.com or section: site.com/path, one per line.
+iranintl.com
+reddit.com
+instagram.com
+bbc.com
+aljazeera.com
+cnn.com
